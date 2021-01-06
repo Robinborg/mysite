@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div class="col-md-8 offset-md-2">
+  <p>Blog posts</p>
+  <ul>
+    {% for entry in entries %}
+     <li><h3>
+        <a href="{% url 'blog:blog_entry' entry.id %}">{{ entry }}</a>
+      </h3></li>
+    {% empty %}
+      <li><h3>There are not entries</h3></li>
+    {% endfor %}
+  </ul>   
+</div>
+{% endblock content %}

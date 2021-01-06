@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% block page_header %}
+<div class="jumbotron">
+    <h1 class="display-3">Follow my journey</h1>
+
+    <p class="lead">I will be documenting my daily learning. The goal is to
+        understand the essence of programming.
+    </p>
+    <a href="{% url 'blog:blog_entries' %}">Blog entries</a>
+{% endblock page_header %}    
+ 
